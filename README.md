@@ -338,7 +338,7 @@ File > Sync Project with Gradle Files
 
 Desenvolvido por **Babi Santos** 💜  
 
-🔗 GitHub: :contentReference[oaicite:1]{index=1}
+🔗 GitHub: https://github.com/babi-s4ntos
 
 Desenvolvido utilizando Kotlin, Ktor e Jetpack Compose.
 
