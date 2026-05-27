@@ -1,16 +1,32 @@
-# TaskListApp - Aplicação Full Stack
+# 🚀 TaskListApp — Aplicação Full Stack de Lista de Tarefas
 
-Aplicação completa de Lista de Tarefas com backend Ktor (Kotlin) e aplicativo Android nativo com Jetpack Compose.
+<p align="center">
+  <img src="https://img.shields.io/badge/Kotlin-1.9.22-purple?style=for-the-badge&logo=kotlin"/>
+  <img src="https://img.shields.io/badge/Ktor-2.3.7-00C853?style=for-the-badge&logo=ktor"/>
+  <img src="https://img.shields.io/badge/Jetpack%20Compose-Android-4285F4?style=for-the-badge&logo=android"/>
+  <img src="https://img.shields.io/badge/Material3-UI-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Retrofit-2.9.0-orange?style=for-the-badge"/>
+</p>
 
-## 📋 Estrutura do Projeto
+---
 
-```
+## ✨ Sobre o Projeto
+
+O **TaskListApp** é uma aplicação **Full Stack** desenvolvida para gerenciamento de tarefas, utilizando tecnologias modernas do ecossistema Kotlin e Android.
+O projeto integra um **backend com Ktor** e um **aplicativo Android nativo com Jetpack Compose**, proporcionando comunicação em tempo real entre cliente e servidor.
+
+---
+
+# 📂 Estrutura do Projeto
+
+```bash
 TaskListApp/
-├── backend/          # Servidor Ktor
+├── backend/                 # Servidor Backend Ktor
 │   ├── src/main/kotlin/com/tasklist/
 │   │   └── Application.kt
 │   └── build.gradle.kts
-└── android/          # Aplicativo Android
+│
+└── android/                 # Aplicativo Android
     ├── app/src/main/java/com/tasklist/
     │   ├── MainActivity.kt
     │   ├── TaskListContent.kt
@@ -20,93 +36,166 @@ TaskListApp/
     └── build.gradle.kts
 ```
 
-## 🔧 Backend (Ktor)
+---
 
-### Tecnologias
-- Kotlin 1.9.22
-- Ktor 2.3.7
-- Kotlinx Serialization
-- Netty Server
+# 🛠️ Tecnologias Utilizadas
 
-### Endpoints
-- `GET /api/tasks` - Retorna todas as tarefas
-- `POST /api/tasks` - Cria uma nova tarefa
+## 🔹 Backend
 
-### Como Executar o Backend
+* ⚙️ Kotlin 1.9.22
+* 🌐 Ktor 2.3.7
+* 🔄 Kotlinx Serialization
+* 🚀 Netty Server
 
-1. Navegue até o diretório do backend:
+## 🔹 Android
+
+* 📱 Jetpack Compose
+* 🎨 Material3
+* 🌍 Retrofit 2.9.0
+* ⚡ Coroutines
+* 🧠 ViewModel
+
+---
+
+# ⚙️ Backend — Ktor Server
+
+## 📌 Endpoints Disponíveis
+
+| Método | Endpoint     | Descrição                |
+| ------ | ------------ | ------------------------ |
+| GET    | `/api/tasks` | Retorna todas as tarefas |
+| POST   | `/api/tasks` | Cria uma nova tarefa     |
+
+---
+
+## ▶️ Como Executar o Backend
+
+### 1️⃣ Acesse a pasta do backend
+
 ```bash
 cd C:\Users\User\CascadeProjects\TaskListApp\backend
 ```
 
-2. Execute o servidor com Gradle:
+### 2️⃣ Execute o servidor
+
 ```bash
 gradlew run
 ```
 
-Ou se você tiver o Gradle instalado globalmente:
+ou:
+
 ```bash
 gradle run
 ```
 
-O servidor iniciará em `http://localhost:8080`
+---
 
-### Testar os Endpoints
+✅ O servidor iniciará em:
 
-**GET /api/tasks**
+```bash
+http://localhost:8080
+```
+
+---
+
+# 🧪 Testando os Endpoints
+
+## 📥 Buscar tarefas
+
 ```bash
 curl http://localhost:8080/api/tasks
 ```
 
-**POST /api/tasks**
+---
+
+## 📤 Criar nova tarefa
+
 ```bash
 curl -X POST http://localhost:8080/api/tasks \
   -H "Content-Type: application/json" \
-  -d '{"id": 0, "title": "Minha Tarefa", "description": "Descrição da tarefa", "completed": false}'
+  -d '{"id":0,"title":"Minha Tarefa","description":"Descrição","completed":false}'
 ```
 
-## 📱 Aplicativo Android (Jetpack Compose)
+---
 
-### Tecnologias
-- Kotlin 1.9.22
-- Jetpack Compose
-- Material3
-- Retrofit 2.9.0
-- Coroutines
-- ViewModel
+# 📱 Aplicativo Android
 
-### Funcionalidades
-- Listagem de tarefas do backend
-- Formulário para adicionar novas tarefas
-- Feedback visual (mensagens de sucesso/erro)
-- Atualização automática da lista
-- Interface moderna com Material3
+## ✨ Funcionalidades
 
-### Como Executar o App Android
+✔️ Listagem dinâmica de tarefas
+✔️ Criação de novas tarefas
+✔️ Atualização automática da lista
+✔️ Interface moderna com Material3
+✔️ Feedback visual de sucesso e erro
+✔️ Comunicação em tempo real com API REST
 
-1. Abra o projeto no Android Studio:
+---
+
+# ▶️ Como Executar o App
+
+## 1️⃣ Abra o projeto no Android Studio
+
 ```bash
 C:\Users\User\CascadeProjects\TaskListApp\android
 ```
 
-2. Certifique-se de que o backend está rodando em `http://localhost:8080`
+---
 
-3. Conecte um dispositivo Android ou inicie um emulador
+## 2️⃣ Certifique-se de que o backend está rodando
 
-4. Clique em "Run" (▶️) no Android Studio ou pressione `Shift + F10`
+```bash
+http://localhost:8080
+```
 
-### Configuração de Rede
+---
 
-O app está configurado para usar `http://10.0.2.2:8080` como URL base, que é o endereço especial do emulador Android para acessar `localhost` da máquina host.
+## 3️⃣ Inicie um emulador Android ou conecte um dispositivo físico
 
-Se estiver testando em um dispositivo físico, altere a URL em `TaskApi.kt`:
+---
+
+## 4️⃣ Execute o aplicativo
+
+▶️ Clique em **Run** no Android Studio
+ou pressione:
+
+```bash
+Shift + F10
+```
+
+---
+
+# 🌐 Configuração de Rede
+
+O aplicativo utiliza:
+
+```kotlin
+http://10.0.2.2:8080
+```
+
+Esse endereço permite que o emulador Android acesse o localhost do computador host.
+
+---
+
+## 📲 Dispositivo físico
+
+Altere a URL no arquivo:
+
+```kotlin
+TaskApi.kt
+```
+
+Para:
+
 ```kotlin
 private const val BASE_URL = "http://SEU_IP_LOCAL:8080/"
 ```
 
-## 📝 Estrutura dos Dados
+---
 
-### Task (Tarefa)
+# 📝 Modelo de Dados
+
+## 📌 Classe Task
+
 ```kotlin
 data class Task(
     val id: Int,
@@ -116,71 +205,147 @@ data class Task(
 )
 ```
 
-## 🎨 Interface do Usuário
+---
 
-### Tela Principal
-- Lista de tarefas com cards
-- Botão de atualização (refresh)
-- Botão flutuante para adicionar tarefas
-- Indicador de status (Pendente/Concluída)
+# 🎨 Interface do Usuário
 
-### Formulário de Adição
-- Campo para título
-- Campo para descrição
-- Validação de campos obrigatórios
-- Feedback visual de sucesso/erro
+## 🖥️ Tela Principal
 
-## 🔒 Permissões
+* 📋 Lista de tarefas
+* 🔄 Botão de atualização
+* ➕ Botão flutuante
+* 🟢 Indicador de status
 
-O app requer a permissão de internet:
+---
+
+## ✏️ Formulário de Adição
+
+* 📝 Campo de título
+* 📄 Campo de descrição
+* ✅ Validação de campos
+* ⚠️ Feedback visual
+
+---
+
+# 🔐 Permissões Necessárias
+
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
-## 📦 Dependências
+---
 
-### Backend
-- `io.ktor:ktor-server-core`
-- `io.ktor:ktor-server-netty`
-- `io.ktor:ktor-server-content-negotiation`
-- `io.ktor:ktor-serialization-kotlinx-json`
-- `org.jetbrains.kotlinx:kotlinx-serialization-json`
+# 📦 Dependências Principais
 
-### Android
-- `androidx.compose.ui:ui`
-- `androidx.compose.material3:material3`
-- `com.squareup.retrofit2:retrofit`
-- `com.squareup.retrofit2:converter-gson`
-- `org.jetbrains.kotlinx:kotlinx-coroutines-android`
+## Backend
 
-## 🚀 Fluxo de Uso
+```kotlin
+io.ktor:ktor-server-core
+io.ktor:ktor-server-netty
+io.ktor:ktor-server-content-negotiation
+io.ktor:ktor-serialization-kotlinx-json
+org.jetbrains.kotlinx:kotlinx-serialization-json
+```
 
-1. Inicie o servidor Ktor backend
-2. Execute o aplicativo Android
-3. O app carregará automaticamente a lista de tarefas
-4. Clique no botão "+" para adicionar uma nova tarefa
-5. Preencha título e descrição
-6. Clique em "Adicionar"
-7. A tarefa será enviada ao backend e a lista será atualizada
-8. Mensagens de sucesso ou erro serão exibidas
+---
 
-## 🐛 Troubleshooting
+## Android
 
-### Backend não inicia
-- Verifique se a porta 8080 está disponível
-- Certifique-se de ter o JDK 17 instalado
+```kotlin
+androidx.compose.ui:ui
+androidx.compose.material3:material3
+com.squareup.retrofit2:retrofit
+com.squareup.retrofit2:converter-gson
+org.jetbrains.kotlinx:kotlinx-coroutines-android
+```
 
-### App não conecta ao backend
-- Verifique se o backend está rodando
-- Em emulador: use `10.0.2.2` para localhost
-- Em dispositivo físico: use o IP da sua máquina
-- Verifique se o firewall não está bloqueando a conexão
+---
 
-### Erro de compilação Android
-- Verifique se o SDK Android está instalado
-- Certifique-se de ter o Android Studio atualizado
-- Sincronize o Gradle: File > Sync Project with Gradle Files
+# 🚀 Fluxo de Funcionamento
 
-## 📄 Licença
+```mermaid
+graph TD
+A[Iniciar Backend Ktor] --> B[Executar App Android]
+B --> C[Carregar Lista de Tarefas]
+C --> D[Adicionar Nova Tarefa]
+D --> E[Enviar para API]
+E --> F[Atualizar Lista]
+F --> G[Exibir Feedback]
+```
 
-Este projeto foi criado para fins educacionais.
+---
+
+# 🐛 Troubleshooting
+
+## ❌ Backend não inicia
+
+* Verifique se a porta `8080` está livre
+* Certifique-se de possuir o `JDK 17`
+
+---
+
+## ❌ App não conecta ao backend
+
+### Emulador Android:
+
+```bash
+10.0.2.2
+```
+
+### Dispositivo físico:
+
+```bash
+IP da sua máquina
+```
+
+Além disso:
+
+* 🔥 Verifique o firewall
+* 🌐 Confirme que o backend está online
+
+---
+
+## ❌ Erro de compilação
+
+* Atualize o Android Studio
+* Sincronize o Gradle:
+
+```bash
+File > Sync Project with Gradle Files
+```
+
+* Verifique o SDK Android instalado
+
+---
+
+# 📸 Preview do Projeto
+
+## 📱 Aplicativo Android
+
+* Interface moderna
+* Layout responsivo
+* Design clean com Material3
+
+## 🌐 Backend REST API
+
+* API simples e eficiente
+* Comunicação via JSON
+* Estrutura escalável
+
+---
+
+# 👨‍💻 Autor
+
+Desenvolvido com ❤️ utilizando Kotlin, Ktor e Jetpack Compose.
+
+---
+
+# 📄 Licença
+
+Este projeto foi desenvolvido para fins educacionais e aprendizado Full Stack com Kotlin.
+
+---
+
+<p align="center">
+  ⭐ Se gostou do projeto, deixe uma estrela no repositório!
+</p>
