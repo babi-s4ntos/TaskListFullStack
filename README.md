@@ -17,6 +17,25 @@ O projeto integra um **backend com Ktor** e um **aplicativo Android nativo com J
 
 ---
 
+## 📸 Screenshots
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="./assets/home-screen.png" width="250"><br>
+      <b>🏠 Tela Principal</b>
+    </td>
+    <td align="center">
+      <img src="./assets/add-task.png" width="250"><br>
+      <b>➕ Nova Tarefa</b>
+    </td>
+    <td align="center">
+      <img src="./assets/task-list.png" width="250"><br>
+      <b>📋 Lista de Tarefas</b>
+    </td>
+  </tr>
+</table>
+
 # 📂 Estrutura do Projeto
 
 ```bash
